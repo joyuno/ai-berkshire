@@ -28,6 +28,19 @@
 |--------|------|-----|---------|
 | 1（主） | **东方财富** | eastmoney.com → 搜股票代码 → 财务报表 | 直接访问 |
 | 2（副） | **巨潮资讯** | cninfo.com.cn | 原始年报/季报PDF |
+| 工具 | **ashare_data.py** | `py tools/ashare_data.py financials {代码}` | 自动取数（腾讯行情+东方财富） |
+
+### 韩股 / 한국（KOSPI/KOSDAQ — 삼성전자 005930、카카오 035720 등）
+
+| 优先级 | 来源 | URL | 获取方式 |
+|--------|------|-----|---------|
+| 1（主） | **krx_data.py（네이버 금융）** | `py tools/krx_data.py financials\|quote\|valuation\|search {코드}` | 自动取数，零依赖 |
+| 2（副） | **네이버 금융** | finance.naver.com/item/main.naver?code={코드} | 直接访问 |
+| 原始一手 | **DART 전자공시** | dart.fss.or.kr | 사업보고서/분기보고서 원문 |
+| 行情/分类 | **KRX 정보데이터시스템** | data.krx.co.kr | 시세·업종분류·시가총액 |
+
+> 韩股代码为 6 位数字。金额单位通常为 **억원(亿韩元)**，注意与 조원(만억원) 换算。
+> ADR 가능 종목(예: 쿠팡 CPNG, 그랩 등 美상장)은 美股 来源(macrotrends/SEC) 우선.
 
 ---
 
@@ -101,3 +114,7 @@
 | 吉比特 | eastmoney.com（603444） | cninfo.com.cn |
 | Nintendo | macrotrends.net/stocks/charts/NTDOY | stockanalysis.com/stocks/ntdoy |
 | Capcom | macrotrends（CCOEY） | stockanalysis（CCOEY） |
+| 삼성전자 | `py tools/krx_data.py financials 005930` | 네이버 금융 005930 / DART |
+| SK하이닉스 | `py tools/krx_data.py financials 000660` | 네이버 금융 000660 / DART |
+| 카카오 | `py tools/krx_data.py financials 035720` | 네이버 금융 035720 / DART |
+| 쿠팡(美상장) | macrotrends.net/stocks/charts/CPNG | stockanalysis.com/stocks/cpng |

@@ -37,7 +37,8 @@
 > **数据源规范**：参见 `skills/financial-data.md`。所有财务数据必须来自两个独立来源，误差>1%须标记。
 > - 美股：macrotrends（主）+ stockanalysis（副）
 > - 港股：aastocks（主）+ macrotrends ADR（副）
-> - A股：东方财富（主）+ 巨潮资讯（副）
+> - A股：东方财富（主）+ 巨潮资讯（副）；可用 `py tools/ashare_data.py`
+> - 韩股：`py tools/krx_data.py`（네이버 금융, 主）+ DART/KRX（副）
 
 使用 Task 工具启动后台 Agent，从网络收集以下数据：
 
@@ -221,7 +222,7 @@ python3 ~/ai-berkshire/tools/report_audit.py extract \
 
 **Step 2 — 取数核验：**
 对清单中每个数据点，按 `skills/financial-data.md` 规范从可靠信源取数
-（美股：macrotrends+stockanalysis；港股：aastocks+macrotrends；A股：东方财富+巨潮资讯），
+（美股：macrotrends+stockanalysis；港股：aastocks+macrotrends；A股：东方财富+巨潮资讯；韩股：krx_data.py/네이버 금융+DART），
 填入 `fetched_value` / `fetched_source` / `fetched_value2` / `fetched_source2`。
 
 **Step 3 — 输出判决：**

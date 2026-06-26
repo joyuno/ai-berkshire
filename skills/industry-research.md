@@ -85,9 +85,10 @@
 
 ### 搜索清单
 - 美股（NYSE/NASDAQ/NYSE American）相关公司
+- 韩股（KOSPI/KOSDAQ）相关公司 — `py tools/krx_data.py search {키워드}`
 - A股（上海/深圳）相关公司
 - 港股相关公司
-- 其他国际市场（日本/韩国/欧洲/澳大利亚等）
+- 其他国际市场（日本/欧洲/澳大利亚等）
 - 行业ETF
 - 关键未上市公司（可能未来IPO）
 

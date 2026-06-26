@@ -467,8 +467,8 @@ B级瓶颈（有压力）：
    - 每日扫描：`reports/bottleneck-map/daily/{YYYY-MM-DD}-{am/pm}.md`
    - 瓶颈总地图：`reports/bottleneck-map/master-map.md`
    - 观察名单：`reports/bottleneck-map/watchlist.md`
-2. **语言**：中文
+2. **语言**：韩语（한국어）
 3. **风格**：直接、犀利、不说废话
-4. **数据**：所有数据标注来源；估计值标"估计"
+4. **数据**：所有数据标注来源；估计值标"추정"
 5. **不预设立场**：先摆数据 → 推逻辑 → 出结论
 6. **正反两面**：每个核心判断附反面论据
